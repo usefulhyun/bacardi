@@ -66,6 +66,10 @@ short TestInterface::ShortMethod(short number) {
   return number;
 }
 
+uint32_t TestInterface::UnsignedLongMethod(uint32_t number) {
+  return number;
+}
+
 double TestInterface::DoubleMethod(double number) {
   return number;
 }
@@ -104,3 +108,4 @@ double TestInterface::GetStaticDoubleNumber() {
 void TestInterface::SetStaticDoubleNumber(double number) {
   TestInterface::static_double_number_ = number;
 }
+

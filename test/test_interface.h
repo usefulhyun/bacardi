@@ -36,6 +36,7 @@ class TestInterface {
   int8_t ByteMethod(int8_t number);
   uint8_t OctetMethod(uint8_t number);
   short ShortMethod(short number);
+  uint32_t UnsignedLongMethod(uint32_t number);
   double DoubleMethod(double number);
   const std::string StringMethod(const std::string& string);
 

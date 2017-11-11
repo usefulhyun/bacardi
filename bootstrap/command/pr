@@ -14,6 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-. $BACARDI_PATH/bootstrap/common/path_info.sh
-
-node --napi-modules $(bacardi_path)/node_modules/jest/bin/jest.js --verbose
+if [[ $# == 1 ]]; then
+  git pull origin pull/$1/head
+elif [[ $# == 2 ]]; then
+  git fetch origin pull/$1/head:$2
+else
+  echo "Usage: bacardi pr <pull_request_number> [optional: branch_name]"
+  echo
+fi

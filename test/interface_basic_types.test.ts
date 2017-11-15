@@ -146,7 +146,6 @@ test('Test for IDL \'float\' type', async () => {
   // The float type is a floating point numeric type that corresponds to the set
   // of finite single-precision 32 bit IEEE 754 floating point numbers.
 
-
   expect(test_interface.floatMethod(0.0)).toBe(0.0);
 
   var base = 1 / 2
@@ -182,8 +181,6 @@ test('Test for IDL \'float\' type', async () => {
   // the value beyond the range of exponent
   expect(test_interface.floatMethod(float_min / 2) != float_min / 2).toBe(true)
   expect(test_interface.floatMethod(float_min / 2) != float_min / 2).toBe(true)
-
-
 
   // NaN == NaN returns false, thus we must use isNaN function
   expect(isNaN(test_interface.floatMethod(NaN))).toBe(true);

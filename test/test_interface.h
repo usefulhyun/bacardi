@@ -47,6 +47,7 @@ class TestInterface {
 
   // Enum
   void VoidMethodTestEnumArg(const std::string& string);
+  const std::string EnumReturnMethod(long index);
 
   // Attributes
   void ReadonlyAssignTest(double number);

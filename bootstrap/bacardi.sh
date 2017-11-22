@@ -35,9 +35,9 @@ git submodule update
 # Sync third_parties.
 sync_node
 
-# NPM update
+# NPM install or update
 if [ ! -f .last_update ] || [ package.json -nt .last_update ]; then
-  npm install && > .last_update
+  npm install
 fi
 
 for command in $(ls $(bootstrap_command_path)); do
@@ -47,3 +47,5 @@ for command in $(ls $(bootstrap_command_path)); do
     exit
   fi
 done
+
+gulp $@
